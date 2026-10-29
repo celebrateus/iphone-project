@@ -58,16 +58,16 @@
             <div class="app-home" data-app="yt">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <!-- 바깥쪽 빨간 원 -->
-                    <circle cx="50" cy="50" r="48" fill="#ff0000" />
+                    <circle cx="50" cy="50" r="48" fill="#ff0000"/>
 
                     <!-- 가운데 흰색 원 -->
-                    <circle cx="50" cy="50" r="28" fill="#ffffff" />
+                    <circle cx="50" cy="50" r="28" fill="#ffffff"/>
 
                     <!-- 흰색 원 안쪽의 빨간 원 -->
-                    <circle cx="50" cy="50" r="24.5" fill="#ff0000" />
+                    <circle cx="50" cy="50" r="24.5" fill="#ff0000"/>
 
                     <!-- 흰색 재생 버튼 -->
-                    <path d="M41 36 L41 64 L65 50 Z" fill="#ffffff" />
+                    <path d="M41 36 L41 64 L65 50 Z" fill="#ffffff"/>
                 </svg>
                 YT Music
             </div>
@@ -98,8 +98,14 @@
                     <circle cx="50" cy="50" r="40" fill="none" stroke="#3a3a3c" stroke-width="8"
                             stroke-dasharray="2.600 2.400"></circle>
                     <circle cx="50" cy="50" r="36" fill="#48484b"></circle>
-                    <circle cx="50" cy="50" r="28" fill="none" stroke="#c6c6cb" stroke-width="3.500"
-                            stroke-dasharray="150 26" transform="rotate(-30 50 50)"></circle>
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="28"
+                        fill="none"
+                        stroke="#c6c6cb"
+                        stroke-width="3.5"
+                    />
                     <circle cx="50" cy="50" r="23" fill="#27272a"></circle>
                     <path d="M50 50V28M50 50L69 61M50 50L31 61" stroke="#cfcfd4" stroke-width="6.500"
                           stroke-linecap="round"></path>
