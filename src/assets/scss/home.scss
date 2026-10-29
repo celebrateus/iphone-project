@@ -1,0 +1,211 @@
+html, body {
+    height: 100%;
+    background: #dcdce2;
+    overflow: hidden;
+    font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+.device {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 417px;
+    height: 876px;
+    background: #1b1b1f;
+    border-radius: 70px;
+    padding: 12px;
+    box-shadow: 0 0 0 2px #55555c, 0 30px 80px rgba(0, 0, 0, .45);
+}
+
+.device-screen {
+    position: relative;
+    width: 417px;
+    height: 876px;
+    border-radius: 58px;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    user-select: none;
+}
+
+.device-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 54px;
+    z-index: 40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 34px 0 48px;
+    font-weight: 600;
+    font-size: 17px;
+    pointer-events: none;
+    color: #fff;
+
+    .device-top-clock {
+        font-weight: 600;
+        font-size: 17px;
+        pointer-events: none;
+        color: #fff;
+    }
+
+    .device-top-hole {
+        position: absolute;
+        top: 11px;
+        left: 50%;
+        width: 124px;
+        height: 36px;
+        margin-left: -62px;
+        background: #000;
+        border-radius: 20px;
+        z-index: 41;
+    }
+
+    .device-top-system {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+}
+
+.device-bottom {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 138px;
+    height: 5px;
+    margin-left: -69px;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 42;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+}
+
+.device-home {
+    z-index: 1;
+    transition: transform .45s cubic-bezier(.5, 0, .2, 1);
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    padding: 74px 22px 0;
+
+    background-image: url('@/assets/images/etc/sea.jpg');
+
+    .app-home {
+        width: 62px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    }
+
+    .app-list-home {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px 0;
+        justify-items: center;
+    }
+
+    .app-list-bottom {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 20px;
+        height: 96px;
+        border-radius: 44px;
+        background: rgba(150, 140, 132, .5);
+        backdrop-filter: blur(22px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 38px;
+
+
+    }
+}
+
+.device-lock {
+    z-index: 20;
+    transition: transform .45s cubic-bezier(.5, 0, .2, 1);
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+
+    background-image: url('@/assets/images/etc/sea.jpg');
+
+    .lock-date {
+        position: absolute;
+        top: 92px;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, .35);
+    }
+
+    .lock-clock {
+        position: absolute;
+        top: 112px;
+        width: 100%;
+        text-align: center;
+        font-size: 92px;
+        font-weight: 600;
+        letter-spacing: -2px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+    }
+
+    .lock-flash {
+        position: absolute;
+        left: 46px;
+        bottom: 70px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background: rgba(40, 40, 44, .5);
+        backdrop-filter: blur(12px);
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+    }
+    .lock-camera {
+        position: absolute;
+        right: 46px;
+        bottom: 70px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background: rgba(40, 40, 44, .5);
+        backdrop-filter: blur(12px);
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+    }
+
+    .lock-text {
+        position: absolute;
+        bottom: 34px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        opacity: .9;
+        text-shadow: 0 1px 4px #000;
+        animation: bl 2s infinite;
+    }
+}
+
+.slide-up {
+    &-leave-active {
+        transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+        will-change: transform;
+    }
+
+    &-leave-to {
+        transform: translate3d(0, -100%, 0);
+    }
+}

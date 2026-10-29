@@ -1,0 +1,512 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('@/assets/font/NotoSansKR-Black.otf'); ///* IE9 Compat Modes */
+    src: url('@/assets/font/NotoSansKR-Black.otf') format('embedded-opentype'),
+        ///* IE6-IE8 */
+        url('@/assets/font/NotoSansKR-Black.otf') format('woff2'); ///* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('@/assets/font/NotoSansKR-Bold.otf'); ///* IE9 Compat Modes */
+    src: url('@/assets/font/NotoSansKR-Bold.otf') format('embedded-opentype'),
+        ///* IE6-IE8 */
+        url('@/assets/font/NotoSansKR-Bold.otf') format('woff2'); ///* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('@/assets/font/NotoSansKR-Light.otf'); ///* IE9 Compat Modes */
+    src: url('@/assets/font/NotoSansKR-Light.otf') format('embedded-opentype'),
+        ///* IE6-IE8 */
+        url('@/assets/font/NotoSansKR-Light.otf') format('woff2'); ///* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('@/assets/font/NotoSansKR-Medium.otf'); ///* IE9 Compat Modes */
+    src: url('@/assets/font/NotoSansKR-Medium.otf') format('embedded-opentype'),
+        ///* IE6-IE8 */
+        url('@/assets/font/NotoSansKR-Medium.otf') format('woff2'); ///* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('@/assets/font/NotoSansKR-Regular.otf'); ///* IE9 Compat Modes */
+    src: url('@/assets/font/NotoSansKR-Regular.otf') format('embedded-opentype'),
+        ///* IE6-IE8 */
+        url('@/assets/font/NotoSansKR-Regular.otf') format('woff2'); ///* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('@/assets/font/NotoSansKR-Thin.otf'); ///* IE9 Compat Modes */
+    src: url('@/assets/font/NotoSansKR-Thin.otf') format('embedded-opentype'),
+        ///* IE6-IE8 */
+        url('@/assets/font/NotoSansKR-Thin.otf') format('woff2'); ///* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'pretendard';
+    src: url('~@/assets/font/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('~@/assets/font/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('~@/assets/font/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('~@/assets/font/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('~@/assets/font/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('~@/assets/font/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pretendard';
+    src: url('~@/assets/font/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+.g13400 {
+    color: #9e9e9e;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.b20600 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.b3450016 {
+    color: #343434;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.g3615500 {
+    color: #363636;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.rf714400 {
+    color: #f74d4d;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.g3620600 {
+    color: #363636;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.g6714500 {
+    color: #676767;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.g6713400 {
+    color: #676767;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.g14500 {
+    color: #676767;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.g16500 {
+    color: #363636;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.g18600 {
+    color: #343434;
+    font-size: 18px;
+}
+
+.b14600 {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.g5512500 {
+    color: #555555;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.g5512600 {
+    color: #555555;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.gb312500 {
+    color: #b3b3b3;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.b22500 {
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.b0214500 {
+    color: #02afef;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.b18600 {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.g8814400 {
+    color: #888888;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.g8612400 {
+    color: #868686;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.b3415400 {
+    color: #343434;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.g7714400 {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.b2d14400 {
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.b3414400 {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.b14400 {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.b15500 {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.g9e13400 {
+    color: #9e9e9e;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.g8d14400 {
+    color: #8d8d8d;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.b16400 {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.s0213400 {
+    color: #02afef;
+    font-size: 13px;
+    font-weight: 400;
+} // sky blue
+
+.s02176700 {
+    color: #02afef;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.b3414500 {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.b3414400 {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.b5414400 {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+}
+.b5415400 {
+    color: #545454;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.g6714400 {
+    color: #676767;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.g8615400 {
+    color: #868686;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.b3415600 {
+    color: #343434;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.g8813400 {
+    color: #888888;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.b3416700 {
+    color: #343434;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.g9214400 {
+    color: #929292;
+    font-size: 14px;
+    font-weight: 400;
+}
+.g7b15400 {
+    color: #7b7b7b;
+    font-size: 14px;
+}
+
+.g7b14500 {
+    color: #7b7b7b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.w26600 {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.b28500 {
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.g5414400 {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.b4714500 {
+    color: #474747;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.b4714600 {
+    color: #474747;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.b24500 {
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.b15400 {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.b2815400 {
+    color: #282828;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.b3618700 {
+    color: #363636;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.b16500 {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.b20500 {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.b26500 {
+    color: black;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.w24700 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.w13500 {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.g9816300 {
+    color: #989898;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.b28700 {
+    color: black;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.w32700 {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.w15500 {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.w16500 {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.b3418500 {
+    color: #343434;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.b16600 {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+.b32700 {
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.b3415700 {
+    color: #343434;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.b17600 {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.b15500 {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.b24700 {
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+}
