@@ -57,16 +57,10 @@
             </div>
             <div class="app-home" data-app="yt">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <!-- 바깥쪽 빨간 원 -->
+
                     <circle cx="50" cy="50" r="48" fill="#ff0000"/>
-
-                    <!-- 가운데 흰색 원 -->
                     <circle cx="50" cy="50" r="28" fill="#ffffff"/>
-
-                    <!-- 흰색 원 안쪽의 빨간 원 -->
                     <circle cx="50" cy="50" r="24.5" fill="#ff0000"/>
-
-                    <!-- 흰색 재생 버튼 -->
                     <path d="M41 36 L41 64 L65 50 Z" fill="#ffffff"/>
                 </svg>
                 YT Music
