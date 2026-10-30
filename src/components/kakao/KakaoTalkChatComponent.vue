@@ -82,6 +82,33 @@
                     </div>
                 </div>
             </div>
+            <div>
+                <div class="chat-date-top">2026년 11월 03일</div>
+                <div class="chat-msg">
+                    <div class="wrap-msg me">
+                        <div class="chat-text">애기 공주 여보</div>
+                        <div class="chat-time">0:00</div>
+                    </div>
+                </div>
+                <div class="chat-msg">
+                    <div class="wrap-msg me">
+                        <div class="chat-text">100 일 동안 나랑 사이좋게 잘 놀아 줘서 고마워</div>
+                        <div class="chat-time">0:00</div>
+                    </div>
+                </div>
+                <div class="chat-msg">
+                    <div class="wrap-msg me">
+                        <div class="chat-text">앞으로도 오래오래 함께 할 수 있으면 좋겠어</div>
+                        <div class="chat-time">0:00</div>
+                    </div>
+                </div>
+                <div class="chat-msg">
+                    <div class="wrap-msg me">
+                        <div class="chat-text">사랑해 ♥</div>
+                        <div class="chat-time">0:00</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="wrap-chat-input">
             <span class="icon-plus">＋</span>
@@ -104,7 +131,7 @@
 </template>
 
 <script>
-import {defineComponent} from "vue";
+import {defineComponent, nextTick } from "vue";
 import EventBus from "@/utils/event-bus.js";
 import talkData from "@/utils/talkData.json";
 
@@ -125,7 +152,6 @@ export default defineComponent({
         };
     },
     created() {
-
     },
     mounted() {
         this.setData();
@@ -148,6 +174,15 @@ export default defineComponent({
             this.august05 = talkData?.['260805'];
             this.august07 = talkData?.['260807'];
             this.september28 = talkData?.['260928'];
+
+            setTimeout(async () => {
+                const scrollBox = document.querySelector('.wrap-chat-list');
+                await nextTick()
+
+                if (scrollBox) {
+                    scrollBox.scrollTop = scrollBox.scrollHeight
+                }
+            }, 100)
         }
     },
     watch: {},
