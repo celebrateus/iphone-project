@@ -21,7 +21,7 @@
             </div>
 
             <transition name="slide-up">
-                <LockComponent v-if="isLock"></LockComponent>
+                <LockComponent v-if="isLock" @click="unlock()"></LockComponent>
             </transition>
             <HomeComponent></HomeComponent>
 

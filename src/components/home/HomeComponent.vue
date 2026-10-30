@@ -1,7 +1,7 @@
 <template>
     <div class="device-home">
         <div class="app-list-home">
-            <div class="app-home" data-app="kk">
+            <div class="app-home" data-app="kk" @click="movePage('/kakao')">
                 <svg viewBox="0 0 100 100">
                     <rect width="100" height="100" rx="23" fill="#FAE100"></rect>
                     <ellipse cx="50" cy="46" rx="39" ry="31" fill="#3A1D1D"></ellipse>
@@ -173,7 +173,17 @@ export default defineComponent({
     unmounted() {
     },
     computed: {},
-    methods: {},
+    methods: {
+        movePage(url) {
+            this.$router.push(url);
+        },
+        moveBack() {
+            this.$router.back();
+        },
+        moveHome() {
+            this.$router.replace('/');
+        }
+    },
     watch: {},
 })
 </script>

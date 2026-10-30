@@ -50,6 +50,10 @@ html, body {
         font-size: 17px;
         pointer-events: none;
         color: #fff;
+
+        &.app-black {
+            color: #000 !important;
+        }
     }
 
     .device-top-hole {
