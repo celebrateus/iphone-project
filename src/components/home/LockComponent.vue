@@ -28,7 +28,9 @@ export default defineComponent({
     components: {},
     props: {},
     data() {
-        return {};
+        return {
+            isLoading: true,
+        };
     },
     created() {
 
@@ -47,26 +49,25 @@ export default defineComponent({
         getClock() {
             setInterval(() => {
                 const clock = document.querySelector(".lock-clock");
-                const d = new Date();
-                const h = String(d.getHours()).padStart(2, "0");
-                const m = String(d.getMinutes()).padStart(2, "0");
+                const now = new Date();
+                const h = String(now.getHours()).padStart(2, "0");
+                const m = String(now.getMinutes()).padStart(2, "0");
                 clock.innerText = `${h}:${m}`;
-            }, 1000);
 
-        },
-        getDate() {
-            setInterval(() => {
-                const clock = document.querySelector(".lock-date");
-                const now = new Date(); // 현재 날짜 및 시간 생성
+                const dateClock = document.querySelector(".lock-date");
 
-                const year = now.getFullYear(); // 연도
                 const month = now.getMonth() + 1; // 월 (0부터 시작하므로 +1 필요)
                 const date = now.getDate(); // 일
 
                 const week = ['일', '월', '화', '수', '목', '금', '토']; // 요일 배열
                 const dayOfWeek = week[now.getDay()]; // 요일 (0: 일요일 ~ 6: 토요일)
 
-                clock.innerText = `${month}월 ${date}일 ${dayOfWeek}요일`;
+                dateClock.innerText = `${month}월 ${date}일 ${dayOfWeek}요일`;
+            }, 1000);
+        },
+        getDate() {
+            setInterval(() => {
+
             }, 1000);
 
         }

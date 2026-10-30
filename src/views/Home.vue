@@ -34,6 +34,7 @@
 import {defineComponent} from "vue";
 import LockComponent from "@/components/home/LockComponent.vue";
 import HomeComponent from "@/components/home/HomeComponent.vue";
+import EventBus from "@/utils/event-bus.js";
 
 export default defineComponent({
     name: 'Home',
@@ -50,9 +51,12 @@ export default defineComponent({
     },
     mounted() {
         this.getClock();
+        EventBus.$on('systemBlack', this.systemBlack);
+        EventBus.$on('systemWhite', this.systemWhite);
     },
     beforeUnmount() {
-
+        EventBus.$off('systemBlack');
+        EventBus.$off('systemWhite');
     },
     unmounted() {
     },
@@ -71,8 +75,27 @@ export default defineComponent({
         unlock() {
             if (this.isLock) {
                 this.isLock = false;
+            } else {
+                EventBus.$emit('moveHome', '#kk');
             }
-        }
+        },
+        systemBlack() {
+            const topClock = document.querySelector('.device-top-clock');
+            const top = document.querySelector('.device-top');
+            const bottom = document.querySelector('.device-bottom');
+            topClock.classList.add('black');
+            top.classList.add('black');
+            bottom.classList.add('black');
+        },
+        systemWhite() {
+            const topClock = document.querySelector('.device-top-clock');
+            const top = document.querySelector('.device-top');
+            const bottom = document.querySelector('.device-bottom');
+            topClock.classList.remove('black');
+            top.classList.remove('black');
+            bottom.classList.remove('black');
+        },
+
     },
     watch: {},
 })

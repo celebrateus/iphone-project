@@ -1,7 +1,7 @@
 <template>
     <div class="device-home">
         <div class="app-list-home">
-            <div class="app-home" data-app="kk" @click="movePage('/kakao')">
+            <div class="app-home" data-app="kk" @click="movePage('#kk')">
                 <svg viewBox="0 0 100 100">
                     <rect width="100" height="100" rx="23" fill="#FAE100"></rect>
                     <ellipse cx="50" cy="46" rx="39" ry="31" fill="#3A1D1D"></ellipse>
@@ -12,7 +12,7 @@
                 </svg>
                 카카오톡
             </div>
-            <div class="app-home" data-app="pho">
+            <div class="app-home" data-app="pho" @click="movePage('#pho')">
                 <svg viewBox="0 0 100 100">
                     <rect width="100" height="100" rx="23" fill="#fff"></rect>
                     <g transform="translate(50 50)">
@@ -36,7 +36,7 @@
                 </svg>
                 사진
             </div>
-            <div class="app-home" data-app="ig">
+            <div class="app-home" data-app="ig" @click="movePage('#ig')">
                 <svg viewBox="0 0 100 100">
                     <defs>
                         <radialGradient id="g5" cx="30%" cy="107%" r="130%">
@@ -55,7 +55,7 @@
                 </svg>
                 Instagram
             </div>
-            <div class="app-home" data-app="yt">
+            <div class="app-home" data-app="yt" @click="movePage('#yt')">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 
                     <circle cx="50" cy="50" r="48" fill="#ff0000"/>
@@ -65,7 +65,7 @@
                 </svg>
                 YT Music
             </div>
-            <div class="app-home" data-app="nfx">
+            <div class="app-home" data-app="nfx" @click="movePage('#nfx')">
                 <svg viewBox="0 0 100 100">
                     <defs>
                         <linearGradient id="gnf" x1="0" y1="0" x2="1" y2="0">
@@ -80,7 +80,7 @@
                 </svg>
                 Netflix
             </div>
-            <div class="app-home" data-app="st">
+            <div class="app-home" data-app="st" @click="movePage('#st')">
                 <svg viewBox="0 0 100 100">
                     <defs>
                         <linearGradient id="g6" x1="0" y1="0" x2="0" y2="1">
@@ -118,7 +118,7 @@
                     </g>
                 </svg>
             </div>
-            <div class="app-home" data-app="nt">
+            <div class="app-home" data-app="nt" @click="movePage('#nt')">
                 <svg viewBox="0 0 100 100">
                     <defs>
                         <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
@@ -147,16 +147,34 @@
                 </svg>
             </div>
         </div>
+
+        <div id="kk" class="screen-app">
+            <KakaoTalkHomeComponent></KakaoTalkHomeComponent>
+        </div>
+        <div id="pho" class="screen-app">
+        </div>
+        <div id="ig" class="screen-app">
+        </div>
+        <div id="yt" class="screen-app">
+        </div>
+        <div id="nfx" class="screen-app">
+        </div>
+        <div id="st" class="screen-app">
+        </div>
+        <div id="nt" class="screen-app">
+        </div>
     </div>
 </template>
 
 <script>
 import {defineComponent} from "vue";
+import KakaoTalkHomeComponent from "@/components/kakao/KakaoTalkHomeComponent.vue";
+import EventBus from "@/utils/event-bus.js";
 
 export default defineComponent({
     name: 'HomeComponent',
     mixins: [],
-    components: {},
+    components: {KakaoTalkHomeComponent},
     props: {},
     data() {
         return {};
@@ -165,23 +183,24 @@ export default defineComponent({
 
     },
     mounted() {
-
+        EventBus.$on('moveHome', this.moveHome);
     },
     beforeUnmount() {
-
+        EventBus.$off('moveHome');
     },
     unmounted() {
     },
     computed: {},
     methods: {
-        movePage(url) {
-            this.$router.push(url);
+        movePage(key) {
+            EventBus.$emit('systemBlack');
+            const element = document.querySelector(key);
+            element.classList.add('on');
         },
-        moveBack() {
-            this.$router.back();
-        },
-        moveHome() {
-            this.$router.replace('/');
+        moveHome(key) {
+            EventBus.$emit('systemWhite');
+            const element = document.querySelector(key);
+            element.classList.remove('on');
         }
     },
     watch: {},
