@@ -78,10 +78,10 @@ export default defineComponent({
 
     },
     mounted() {
-
+        EventBus.$on('backList', this.backList);
     },
     beforeUnmount() {
-
+        EventBus.$off('backList');
     },
     unmounted() {
     },
@@ -89,6 +89,9 @@ export default defineComponent({
     methods: {
         moveChat() {
             this.isChat = true;
+        },
+        backList() {
+            this.isChat = false;
         },
         moveHome() {
             this.isChat = false;
