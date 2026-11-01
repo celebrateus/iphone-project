@@ -81,6 +81,7 @@ export default defineComponent({
                 EventBus.$emit('moveHome', '#nt');
                 EventBus.$emit('moveHome', '#st');
                 EventBus.$emit('moveHome', '#ig');
+                EventBus.$emit('moveHome', '#nfx');
             }
         },
         systemBlack() {
