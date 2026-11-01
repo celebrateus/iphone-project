@@ -77,6 +77,7 @@ export default defineComponent({
                 this.isLock = false;
             } else {
                 EventBus.$emit('moveHome', '#kk');
+                EventBus.$emit('moveHome', '#pho');
             }
         },
         systemBlack() {

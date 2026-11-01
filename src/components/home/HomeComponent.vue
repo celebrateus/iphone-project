@@ -152,6 +152,7 @@
             <KakaoTalkHomeComponent></KakaoTalkHomeComponent>
         </div>
         <div id="pho" class="screen-app">
+            <GalleryHomeComponent></GalleryHomeComponent>
         </div>
         <div id="ig" class="screen-app">
         </div>
@@ -170,11 +171,12 @@
 import {defineComponent} from "vue";
 import KakaoTalkHomeComponent from "@/components/kakao/KakaoTalkHomeComponent.vue";
 import EventBus from "@/utils/event-bus.js";
+import GalleryHomeComponent from "@/components/gallery/GalleryHomeComponent.vue";
 
 export default defineComponent({
     name: 'HomeComponent',
     mixins: [],
-    components: {KakaoTalkHomeComponent},
+    components: {GalleryHomeComponent, KakaoTalkHomeComponent},
     props: {},
     data() {
         return {};

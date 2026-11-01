@@ -37,7 +37,8 @@
                 border-radius: 17px;
                 overflow: hidden;
                 flex: none;
-                background: #c9d4f5;
+                background-size: cover;
+                background-image: url('@/assets/images/kakao/mario.jpg');
             }
 
             .list-chat-name {
