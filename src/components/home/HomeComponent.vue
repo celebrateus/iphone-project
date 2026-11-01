@@ -164,6 +164,7 @@
         <div id="st" class="screen-app">
         </div>
         <div id="nt" class="screen-app">
+            <NoteComponent></NoteComponent>
         </div>
     </div>
 </template>
@@ -174,11 +175,12 @@ import KakaoTalkHomeComponent from "@/components/kakao/KakaoTalkHomeComponent.vu
 import EventBus from "@/utils/event-bus.js";
 import GalleryHomeComponent from "@/components/gallery/GalleryHomeComponent.vue";
 import InstagramHomeComponent from "@/components/instagram/InstagramHomeComponent.vue";
+import NoteComponent from "@/components/note/NoteComponent.vue";
 
 export default defineComponent({
     name: 'HomeComponent',
     mixins: [],
-    components: {InstagramHomeComponent, GalleryHomeComponent, KakaoTalkHomeComponent},
+    components: {NoteComponent, InstagramHomeComponent, GalleryHomeComponent, KakaoTalkHomeComponent},
     props: {},
     data() {
         return {};
@@ -197,7 +199,9 @@ export default defineComponent({
     computed: {},
     methods: {
         movePage(key) {
-            EventBus.$emit('systemBlack');
+            if (key !== '#nt') {
+                EventBus.$emit('systemBlack');
+            }
             const element = document.querySelector(key);
             element.classList.add('on');
         },
