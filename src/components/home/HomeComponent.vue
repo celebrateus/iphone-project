@@ -162,6 +162,7 @@
         <div id="nfx" class="screen-app">
         </div>
         <div id="st" class="screen-app">
+            <SettingComponent></SettingComponent>
         </div>
         <div id="nt" class="screen-app">
             <NoteComponent></NoteComponent>
@@ -176,11 +177,12 @@ import EventBus from "@/utils/event-bus.js";
 import GalleryHomeComponent from "@/components/gallery/GalleryHomeComponent.vue";
 import InstagramHomeComponent from "@/components/instagram/InstagramHomeComponent.vue";
 import NoteComponent from "@/components/note/NoteComponent.vue";
+import SettingComponent from "@/components/setting/SettingComponent.vue";
 
 export default defineComponent({
     name: 'HomeComponent',
     mixins: [],
-    components: {NoteComponent, InstagramHomeComponent, GalleryHomeComponent, KakaoTalkHomeComponent},
+    components: {SettingComponent, NoteComponent, InstagramHomeComponent, GalleryHomeComponent, KakaoTalkHomeComponent},
     props: {},
     data() {
         return {};
@@ -199,7 +201,7 @@ export default defineComponent({
     computed: {},
     methods: {
         movePage(key) {
-            if (key !== '#nt') {
+            if (key !== '#nt' && key !== '#st') {
                 EventBus.$emit('systemBlack');
             }
             const element = document.querySelector(key);
