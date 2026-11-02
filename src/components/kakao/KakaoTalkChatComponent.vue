@@ -86,13 +86,25 @@
                 <div class="chat-date-top">2026년 11월 03일</div>
                 <div class="chat-msg">
                     <div class="wrap-msg me">
-                        <div class="chat-text">애기 공주 여보</div>
+                        <div class="chat-text">DZPQUC7APW</div>
                         <div class="chat-time">0:00</div>
                     </div>
                 </div>
                 <div class="chat-msg">
                     <div class="wrap-msg me">
-                        <div class="chat-text">100 일 동안 나랑 사이좋게 잘 놀아 줘서 고마워</div>
+                        <div class="chat-text">J8GNJQGL5D</div>
+                        <div class="chat-time">0:00</div>
+                    </div>
+                </div>
+                <div class="chat-msg">
+                    <div class="wrap-msg me">
+                        <div class="chat-text">애기 공주 여보 혜원아</div>
+                        <div class="chat-time">0:00</div>
+                    </div>
+                </div>
+                <div class="chat-msg">
+                    <div class="wrap-msg me">
+                        <div class="chat-text">100 일 동안 나랑 잘 놀아 줘서 나 사랑해 줘서 고마워</div>
                         <div class="chat-time">0:00</div>
                     </div>
                 </div>
