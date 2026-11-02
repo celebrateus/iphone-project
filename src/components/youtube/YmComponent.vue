@@ -298,9 +298,9 @@ export default defineComponent({
             this.selectMusicData = item;
 
             if (title === 'to') {
-                this.img = '@/assets/images/insta/profile.jpg';
+                this.img = '/iphone-project/images/insta/profile.jpg';
             } else {
-                this.img = '@/assets/images/etc/rabbit-moon.jpg';
+                this.img = '/iphone-project/images/etc/rabbit-moon.jpg';
             }
             this.showDetail = true;
         },

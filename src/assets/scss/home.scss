@@ -7,15 +7,20 @@ html, body {
 
 .device {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(var(--device-scale, 1));
+    transform-origin: center center;
+
     left: 50%;
     top: 50%;
+
     width: 417px;
     height: 876px;
+
     background: #1b1b1f;
     border-radius: 70px;
     padding: 12px;
     box-shadow: 0 0 0 2px #55555c, 0 30px 80px rgba(0, 0, 0, .45);
+    box-sizing: content-box;
 }
 
 .device-screen {

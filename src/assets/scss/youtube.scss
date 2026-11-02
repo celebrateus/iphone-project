@@ -259,10 +259,11 @@
 
                 .wrap-list-right {
                     display: flex;
-                    justify-content: space-between;
                     align-items: center;
+                    width: 80%;
 
                     .yt-list-img {
+                        flex-shrink: 0;
                         width: 80px;
                         height: 80px;
                         background-size: cover;
@@ -270,9 +271,14 @@
                     }
 
                     .yt-list-text {
+                        width: calc(100% - 80px);
                         .yt-list-name {
                             font-size: 16px;
                             font-weight: 600;
+
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
 
                         .yt-list-detail {
