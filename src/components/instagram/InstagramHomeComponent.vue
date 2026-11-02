@@ -310,16 +310,16 @@ export default defineComponent({
     computed: {},
     methods: {
         returnGImg(index) {
-            return `/iphone-project/assets/images/insta/g/${index}.jpg`;
+            return `/iphone-project/images/insta/g/${index}.jpg`;
         },
         returnOImg(index) {
-            return `/iphone-project/assets/images/insta/o/${index}.jpg`;
+            return `/iphone-project/images/insta/o/${index}.jpg`;
         },
         returnKImg(index) {
             if (index === 1 || index === 11 || index === 15) {
-                return `/iphone-project/assets/images/insta/k/${index}.webp`;
+                return `/iphone-project/images/insta/k/${index}.webp`;
             }
-            return `/iphone-project/assets/images/insta/k/${index}.jpg`;
+            return `/iphone-project/images/insta/k/${index}.jpg`;
         },
         onSlideChange(e) {
             this.currentIndex = e.activeIndex;
