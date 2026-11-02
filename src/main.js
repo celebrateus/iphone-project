@@ -4,7 +4,7 @@ function fitDevice() {
 
     const DEVICE_W = 441;
     const DEVICE_H = 900;
-    const MARGIN_X = 16;   // 좌우 여백
+    const MARGIN_X = 32;   // 좌우 여백
     const MARGIN_Y = 80;   // 상하 여백 (더 줄이고 싶으면 이 값을 낮추세요)
 
     // 핀치 줌 배율을 보정해서 실제 보이는 CSS 크기를 구함
