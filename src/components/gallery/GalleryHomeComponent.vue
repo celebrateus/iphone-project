@@ -96,7 +96,7 @@ export default defineComponent({
             }
         },
         returnImg(item) {
-            return '/iphone-project/src/assets/images/etc/' + item;
+            return '/iphone-project/assets/images/etc/' + item;
         },
         movePopup(item) {
             this.imageSrc = item;

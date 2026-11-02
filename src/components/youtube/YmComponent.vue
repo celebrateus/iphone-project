@@ -298,9 +298,9 @@ export default defineComponent({
             this.selectMusicData = item;
 
             if (title === 'to') {
-                this.img = 'src/assets/images/insta/profile.jpg';
+                this.img = '@/assets/images/insta/profile.jpg';
             } else {
-                this.img = 'src/assets/images/etc/rabbit-moon.jpg';
+                this.img = '@/assets/images/etc/rabbit-moon.jpg';
             }
             this.showDetail = true;
         },
