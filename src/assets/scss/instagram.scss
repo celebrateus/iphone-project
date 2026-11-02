@@ -249,6 +249,9 @@ button {
             display: grid;
             place-items: center;
             color: #000;
+            // Safari 기본 버튼 스타일 제거
+            appearance: none;
+            -webkit-appearance: none;
 
             svg {
                 width: 25px;
