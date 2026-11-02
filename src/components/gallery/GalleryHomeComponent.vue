@@ -74,7 +74,7 @@ export default defineComponent({
     data() {
         return {
             photos: [
-                'fig.jpg', 'fig-icecream.jpg', 'sea.jpg', 'rabbit-moon.jpg', 'catdog.jpg', 'babies.webp'
+                'fig.jpg', 'fig-icecream.jpg', 'sea.jpg', 'rabbit-moon.jpg', 'catdog.jpg', 'babies.webp', 'girl.webp'
             ],
             isPopup: false,
             imageSrc: '',

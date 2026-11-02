@@ -158,6 +158,7 @@
             <InstagramHomeComponent></InstagramHomeComponent>
         </div>
         <div id="yt" class="screen-app">
+            <YmComponent></YmComponent>
         </div>
         <div id="nfx" class="screen-app">
             <NetflixComponent></NetflixComponent>
@@ -180,11 +181,13 @@ import InstagramHomeComponent from "@/components/instagram/InstagramHomeComponen
 import NoteComponent from "@/components/note/NoteComponent.vue";
 import SettingComponent from "@/components/setting/SettingComponent.vue";
 import NetflixComponent from "@/components/netflix/NetflixComponent.vue";
+import YmComponent from "@/components/youtube/YmComponent.vue";
 
 export default defineComponent({
     name: 'HomeComponent',
     mixins: [],
     components: {
+        YmComponent,
         NetflixComponent,
         SettingComponent, NoteComponent, InstagramHomeComponent, GalleryHomeComponent, KakaoTalkHomeComponent},
     props: {},
@@ -205,7 +208,7 @@ export default defineComponent({
     computed: {},
     methods: {
         movePage(key) {
-            if (key !== '#nt' && key !== '#st' && key !== '#nfx') {
+            if (key !== '#nt' && key !== '#st' && key !== '#nfx' && key !== '#yt') {
                 EventBus.$emit('systemBlack');
             }
             const element = document.querySelector(key);
