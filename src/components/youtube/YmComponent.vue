@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="wrap-yt-list">
-                <div class="item-yt-list">
+                <div class="item-yt-list" @click="this.selectMusic(this.myMusicData, 'to')">
                     <div class="wrap-list-right">
                         <div class="yt-list-img"></div>
                         <div class="yt-list-text">
@@ -79,7 +79,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="item-yt-list">
+                <div class="item-yt-list" @click="this.selectMusic(this.yourMusicData, 'from')">
                     <div class="wrap-list-right">
                         <div class="yt-list-img you"></div>
                         <div class="yt-list-text">
@@ -93,6 +93,108 @@
                             <circle cx="12" cy="12" r="1.5"></circle>
                             <circle cx="12" cy="19" r="1.5"></circle>
                         </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-yt-detail" v-if="showDetail">
+            <div class="yt-detail-top">
+                <div class="wrap-detail-top-left" @click="backList()">
+                    <div class="back-icon">←</div>
+                    <div class="top-title">{{ this.title }}</div>
+                </div>
+                <div class="wrap-detail-top-right">
+                    <div class="tab-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24" height="24" viewBox="0 0 24 24"
+                             fill="none" stroke="#FFFFFF"
+                             stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M3 4L11 12L3 20V4Z"/>
+                            <path d="M11 4L19 12L11 20"/>
+                        </svg>
+                    </div>
+                    <div class="tab-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="5" r="1.5"></circle>
+                            <circle cx="12" cy="12" r="1.5"></circle>
+                            <circle cx="12" cy="19" r="1.5"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-scroll">
+                <div class="yt-detail-img" :style="`background-image:url('${this.img}')`"></div>
+                <div class="wrap-yt-detail-btn">
+                    <div class="wrap-btn-left">
+                        <div class="yt-detail-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 width="24" height="24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3V16"/>
+                                <path d="M6 11L12 17L18 11"/>
+                                <path d="M4 21H20"/>
+                            </svg>
+                        </div>
+                        <div class="yt-detail-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 width="24" height="24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20H21"/>
+                                <path d="M16.5 3.5A2.12 2.12 0 0 1 19.5 6.5L8 18L3 19L4 14L16.5 3.5Z"/>
+                            </svg>
+                        </div>
+                        <div class="yt-detail-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 width="24" height="24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 16L21 7L12  -2"/>
+                                <path d="M21 7H10C6 7 4 10 4 14V19"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="wrap-btn-right">
+                        <div class="btn-suffle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 width="24" height="24" fill="none"
+                                 stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 3H21V8"/>
+                                <path d="M4 20L21 3"/>
+                                <path d="M21 16V21H16"/>
+                                <path d="M15 15L21 21"/>
+                                <path d="M4 4L9 9"/>
+                            </svg>
+                        </div>
+                        <div class="btn-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 width="24" height="24">
+                                <path
+                                    d="M7 3.5C6.3 3.1 5.5 3.6 5.5 4.4V19.6C5.5 20.4 6.3 20.9 7 20.5L20 13C20.7 12.6 20.7 11.4 20 11L7 3.5Z"
+                                    fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-music-list">
+                    <div class="item-music" v-for="item in this.selectMusicData">
+                        <div class="wrap-list-right">
+                            <div class="yt-list-img" :style="`background-image:url('${item.imgUrl}')`"></div>
+                            <div class="yt-list-text">
+                                <div class="yt-list-name">{{item.name}}</div>
+                                <div class="yt-list-detail">{{item.artist}} • {{item.running}}</div>
+                            </div>
+                        </div>
+                        <div class="yt-list-more-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="5" r="1.5"></circle>
+                                <circle cx="12" cy="12" r="1.5"></circle>
+                                <circle cx="12" cy="19" r="1.5"></circle>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,7 +257,6 @@
 import {defineComponent} from "vue";
 import EventBus from "@/utils/event-bus.js";
 import musicData from "@/utils/musicData.json";
-import talkData from "@/utils/talkData.json";
 
 export default defineComponent({
     name: 'YmComponent',
@@ -166,6 +267,10 @@ export default defineComponent({
         return {
             myMusicData: [],
             yourMusicData: [],
+            selectMusicData: [],
+            showDetail: false,
+            title: '',
+            img: '',
         };
     },
     created() {
@@ -187,6 +292,23 @@ export default defineComponent({
         setData() {
             this.myMusicData = musicData?.['myMusic'];
             this.yourMusicData = musicData?.['yourMusic'];
+        },
+        selectMusic(item, title) {
+            this.title = title;
+            this.selectMusicData = item;
+
+            if (title === 'to') {
+                this.img = 'src/assets/images/insta/profile.jpg';
+            } else {
+                this.img = 'src/assets/images/etc/rabbit-moon.jpg';
+            }
+            this.showDetail = true;
+        },
+        backList() {
+            this.showDetail = false;
+            this.title = '';
+            this.img = '';
+            this.selectMusicData = [];
         }
     },
     watch: {},
