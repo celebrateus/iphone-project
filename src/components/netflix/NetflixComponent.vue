@@ -94,7 +94,7 @@ export default defineComponent({
     computed: {},
     methods: {
         returnImg(item) {
-            return '/src/assets/images/net/' + item + '.png';
+            return '/iphone-project/assets/images/net/' + item + '.png';
         },
     },
     watch: {},
