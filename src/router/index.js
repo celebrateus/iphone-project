@@ -1,11 +1,16 @@
-import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import routes from './routes'
 
 const router = createRouter({
-    history: createWebHashHistory(import.meta.env.BASE_URL),
-    routes: [
-        // 기존 routes 그대로
-    ],
+    history: createWebHistory(),
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash !== from.hash) {
+            return { top: 0 }
+        }
+
+        return { top: 0 }
+    },
 })
 
 export default router
