@@ -4,8 +4,7 @@
             <svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="#3b82f6" stroke-width="3"
                  stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11 3L3 11l8 8"></path>
-            </svg>
-            앨범
+            </svg>앨범
         </div>
         <div class="wrap-top-gallery">
             <span>최근 항목</span>
