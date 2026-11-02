@@ -7,6 +7,10 @@ html, body {
     font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
 
+@media (max-width: 480px) {
+    .device { transform: translate(-50%, -50%) scale(.8) !important; }
+}
+
 .device {
     position: fixed;
     left: 50%;
